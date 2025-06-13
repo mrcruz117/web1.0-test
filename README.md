@@ -1,6 +1,6 @@
 # Contact.app
 
-Contact.app is a simple test application designed to explore Web 1.0-style hypermedia-based architecture.
+Contact.app is a simple test application designed to explore Web 1.0-style hypermedia-based architecture. Thanks, Carson Gross!
 
 ## Features
 
