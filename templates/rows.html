@@ -13,6 +13,9 @@
   <td>{{ contact.phone }}</td>
   <td>{{ contact.email }}</td>
   <td>
+    <a href="/contacts/{{ contact.id }}/edit">Edit</a>
+    <a href="/contacts/{{ contact.id }}">View</a>
+    {#
     <div data-overflow-menu>
       <button
         type="button"
@@ -35,6 +38,7 @@
         >
       </div>
     </div>
+    #}
   </td>
 </tr>
 {% endfor %}
