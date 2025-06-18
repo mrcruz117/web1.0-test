@@ -72,8 +72,13 @@ def contacts_new_get():
 
 @app.route("/contacts/new", methods=['POST'])
 def contacts_new():
-    c = Contact(None, request.form['first_name'], request.form['last_name'], request.form['phone'],
-                request.form['email'])
+    c = Contact(
+        None,
+        request.form['first_name'],
+        request.form['last_name'],
+        request.form['phone'],
+        request.form['email']
+    )
     if c.save():
         flash("Created New Contact!")
         return redirect("/contacts")

@@ -134,5 +134,21 @@
     "phone": null,
     "email": "restexample2@example.com",
     "errors": {}
+  },
+  {
+    "id": 20,
+    "first": "asdf",
+    "last": "fdsa",
+    "phone": "1112223344",
+    "email": "test@test.com",
+    "errors": {}
+  },
+  {
+    "id": 21,
+    "first": "asdf",
+    "last": "asdf2",
+    "phone": "4445553333",
+    "email": "test2",
+    "errors": {}
   }
 ]

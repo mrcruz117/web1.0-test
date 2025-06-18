@@ -23,6 +23,17 @@
       {% for message in get_flashed_messages() %}
       <div class="flash">{{ message }}</div>
       {% endfor %} {% block content %}{% endblock %}
+      <script>
+        // Select all flash messages
+        const flashes = document.querySelectorAll(".flash");
+
+        // Set a timeout to hide each flash message after 3 seconds
+        flashes.forEach((flash) => {
+          setTimeout(() => {
+            flash.style.display = "none";
+          }, 3000); // 3000 milliseconds = 3 seconds
+        });
+      </script>
     </main>
   </body>
 </html>
