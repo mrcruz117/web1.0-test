@@ -112,14 +112,6 @@
     "errors": {}
   },
   {
-    "id": 17,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe12@example.com",
-    "errors": {}
-  },
-  {
     "id": 18,
     "first": null,
     "last": null,
@@ -137,18 +129,10 @@
   },
   {
     "id": 20,
-    "first": "asdf",
+    "first": "asdftest",
     "last": "fdsa",
     "phone": "1112223344",
     "email": "test@test.com",
-    "errors": {}
-  },
-  {
-    "id": 21,
-    "first": "asdf",
-    "last": "asdf2",
-    "phone": "4445553333",
-    "email": "test2",
     "errors": {}
   }
 ]

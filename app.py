@@ -118,15 +118,18 @@ def contacts_email_get(contact_id=0):
     return c.errors.get('email') or ""
 
 
-@app.route("/contacts/<contact_id>", methods=["DELETE"])
+@app.route("/contacts/<contact_id>", methods=["DELETE", "POST"])
 def contacts_delete(contact_id=0):
     contact = Contact.find(contact_id)
+    print("Deleting contact:", contact)
     contact.delete()
     if request.headers.get('HX-Trigger') == 'delete-btn':
         flash("Deleted Contact!")
         return redirect("/contacts", 303)
     else:
-        return ""
+        # return ""
+        flash("Deleted Contact!")
+        return redirect("/contacts", 303)
 
 
 @app.route("/contacts/", methods=["DELETE"])
