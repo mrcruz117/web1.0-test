@@ -72,15 +72,21 @@ class Contact:
 
     @classmethod
     def search(cls, text):
-        result = []
-        for c in cls.db.values():
-            match_first = c.first is not None and text in c.first
-            match_last = c.last is not None and text in c.last
-            match_email = c.email is not None and text in c.email
-            match_phone = c.phone is not None and text in c.phone
-            if match_first or match_last or match_email or match_phone:
-                result.append(c)
-        return result
+        # Normalize for case-insensitive matching
+        text_cf = text.casefold()
+
+        fields = ("first", "last", "email", "phone")
+
+        return [
+            contact
+            for contact in cls.db.values()
+            if any(
+                (getattr(contact, field) or "")
+                .casefold()
+                .find(text_cf) != -1
+                for field in fields
+            )
+        ]
 
     @classmethod
     def load_db(cls):
